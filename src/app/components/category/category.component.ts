@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Category } from 'src/app/models/category';
-import { ListResponseModel } from 'src/app/models/ListResponseModel';
+import { ListResponseModel } from 'src/app/models/listResponseModel';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
