@@ -1,3 +1,3 @@
 import { CartItem } from "./cartItem";
 
-export const CatrItems:CartItem[]=[];
+export const CartItems:CartItem[]=[];
