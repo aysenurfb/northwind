@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": false, //sepetten silme fonksyonunun çalışabilmesi için yazdık
     "strictPropertyInitialization": false, //category newlememek için yazdık
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
