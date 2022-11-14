@@ -29,20 +29,20 @@ export class ProductAddComponent implements OnInit {
   add(){
     if(this.productAddForm.valid){
       let productModel = Object.assign({},this.productAddForm.value)
-      this.productService.add(productModel).subscribe(response=>{
+      this.productService.add(productModel).subscribe({next:(response)=>{
         this.toastrService.success(response.message,"Başarılı")
-      }, responseError=>{
+      }, error:responseError=>{
+        console.log(responseError)
         if(responseError.error.ValidationErrors.length>0)
         {
           for (let i = 0; i < responseError.error.ValidationErrors.length; i++) {
             this.toastrService.error(responseError.error.ValidationErrors[i].ErrorMessage,"Doğrulama Hatası") 
           }
         }
-      })
+      }});
     }else{
       this.toastrService.error("Formunuz Eksik","Dikkat")
     }
-    
   }
 
 }
